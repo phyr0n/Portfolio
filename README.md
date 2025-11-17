@@ -16,3 +16,6 @@ yarn
 # Start the local development server.
 yarn dev
 ```
+## Attribution
+
+* Social Media Icons: https://pagedone.io/docs/social-media-icons
