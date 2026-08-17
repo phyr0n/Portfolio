@@ -11,8 +11,6 @@ type ProjectCardProps = {
 };
 
 export const ProjectCard = ({ project, className = '' }: ProjectCardProps) => {
-  const isCancelled = project.status === 'cancelled';
-
   return (
     <Link
       to={paths.projectDetail.getHref(project.id)}

@@ -29,7 +29,6 @@ export const ProjectDetailRoute = ({ projectId }: ProjectDetailRouteProps) => {
     );
   }
 
-  const isCancelled = project.status === 'cancelled';
   const index = projects.findIndex((p) => p.id === project.id);
   const previous = projects[(index - 1 + projects.length) % projects.length];
   const next = projects[(index + 1) % projects.length];
@@ -93,15 +92,6 @@ export const ProjectDetailRoute = ({ projectId }: ProjectDetailRouteProps) => {
             </dl>
           </div>
         </header>
-
-        {isCancelled && (
-          <div className="mt-8 border-l-2 border-accent bg-bg-elevated py-4 pl-5">
-            <p className="text-sm text-text">
-              This project was cancelled before release. The sections below
-              cover what was built and why it didn't make it to launch.
-            </p>
-          </div>
-        )}
 
         <div className={`gap-12 py-12 ${hasAside ? 'grid grid-cols-1 sm:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]' : ''}`}>
           <div className="space-y-10">
