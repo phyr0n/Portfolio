@@ -6,7 +6,6 @@ export const HomeRoute = () => {
   return (
     <>
       <HeroSection />
-      <FocusSection />
       <FeaturedProjectsSection />
     </>
   );
