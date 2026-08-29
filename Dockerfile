@@ -12,7 +12,8 @@ RUN yarn install --frozen-lockfile
 COPY . .
 RUN yarn build
 
-FROM nginx:alpine
+# Use the unprivileged NGINX image to ensure non-root access.
+FROM nginxinc/nginx-unprivileged:alpine
 # Serve the built website (underneath /dist) into the preconfigured location (/usr/share/nginx/html).
 COPY --from=build /app/dist /usr/share/nginx/html
 EXPOSE 80

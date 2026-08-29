@@ -22,9 +22,11 @@ spec:
     spec:
       containers:
         - name: portfolio
-          image: portfolio:latest
+          image: adamtait.net:latest
+          # This runs locally so it will always be up-to-date. If this were running on a registry, we would want something like 'Always' or 'IfNotPresent'.
+          imagePullPolicy: Never
           ports:
-            - containerPort: 80
+            - containerPort: 8080
           resources:
             requests:
               cpu: "50m"
@@ -32,3 +34,24 @@ spec:
             limits:
               cpu: "200m"
               memory: "128Mi" # It's literally just a frontend.
+          securityContext:
+            runAsNonRoot: true
+            readOnlyRootFilesystem: true
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+                - ALL
+          volumeMounts:
+            - name: tmp
+              mountPath: /tmp
+            - name: cache
+              mountPath: /var/cache/nginx
+            - name: run
+              mountPath: /var/run
+      volumes:
+        - name: tmp
+          emptyDir: {}
+        - name: cache
+          emptyDir: {}
+        - name: run
+          emptyDir: {}
