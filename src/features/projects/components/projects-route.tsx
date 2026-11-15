@@ -1,4 +1,3 @@
-import { MiniHeading } from '@/components/ui/miniheading';
 import { PageContainer } from '@/components/layout/page-container';
 import { projects } from '@/features/projects/data/projects';
 import type { Project, ProjectCategory } from '@/features/projects/types/project';
@@ -21,7 +20,6 @@ export const ProjectsRoute = () => {
   return (
     <section className="py-16 sm:py-24">
       <PageContainer>
-        <MiniHeading>Projects</MiniHeading>
         <h1 className="mt-3 font-display text-4xl font-semibold text-text sm:text-5xl">
           Selected work
         </h1>
@@ -33,7 +31,10 @@ export const ProjectsRoute = () => {
 
       {groups.map(({ category, heading, description }) => {
         const categoryProjects: Project[] = projects.filter((project) => project.category === category);
-        if (categoryProjects.length === 0) return null;
+        if (categoryProjects.length === 0)
+        {
+          return null;
+        }
 
         return (
           <div key={category} className="mt-16 first:mt-12">

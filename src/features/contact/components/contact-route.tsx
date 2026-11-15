@@ -1,4 +1,3 @@
-import { MiniHeading } from '@/components/ui/miniheading';
 import { Panel } from '@/components/ui/panel';
 import { PageContainer } from '@/components/layout/page-container';
 
@@ -11,7 +10,6 @@ const channels = [
 export const ContactRoute = () => {
   return (
     <PageContainer className="py-16 sm:py-24">
-      <MiniHeading>Contact</MiniHeading>
       <h1 className="mt-3 font-display text-4xl font-semibold text-text sm:text-5xl">
         Contact me
       </h1>

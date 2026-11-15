@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { paths } from '@/config/paths';
-import { MiniHeading } from '@/components/ui/miniheading';
 import { Markdown } from '@/components/ui/markdown';
 import { PageContainer } from '@/components/layout/page-container';
 import { getProjectById, projects } from '@/features/projects/data/projects';
@@ -18,7 +17,6 @@ export const ProjectDetailRoute = ({ projectId }: ProjectDetailRouteProps) => {
   if (!project) {
     return (
       <PageContainer className="max-w-3xl! py-24">
-        <MiniHeading>Not found</MiniHeading>
         <h1 className="mt-3 font-display text-3xl font-semibold text-text">
           No project matches “{projectId}”.
         </h1>

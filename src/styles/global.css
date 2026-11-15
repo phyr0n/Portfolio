@@ -1,5 +1,89 @@
 @import 'tailwindcss';
 
+/* Big thank you to @puzzylpiece for this beautiful font. https://twitter.com/puzzylpiece/status/2120920924719640690 */
+@font-face {
+  font-family: 'Console Square';
+  src: url('./assets/fonts/ConsoleSquare/ConsoleSquare-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Console Square';
+  src: url('./assets/fonts/ConsoleSquare/ConsoleSquare-ExtraLight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Console Square';
+  src: url('./assets/fonts/ConsoleSquare/ConsoleSquare-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Console Square';
+  src: url('./assets/fonts/ConsoleSquare/ConsoleSquare-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Console Square';
+  src: url('./assets/fonts/ConsoleSquare/ConsoleSquare-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Console Square';
+  src: url('./assets/fonts/ConsoleSquare/ConsoleSquare-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Console Square';
+  src: url('./assets/fonts/ConsoleSquare/ConsoleSquare-ExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Console Square';
+  src: url('./assets/fonts/ConsoleSquare/ConsoleSquare-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Instrument Sans: body font (variable) */
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('./assets/fonts/InstrumentSans/InstrumentSans-Variable.ttf') format('truetype');
+  font-weight: 400 700;
+  font-stretch: 75% 100%;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('./assets/fonts/InstrumentSans/InstrumentSans-Italic-Variable.ttf') format('truetype');
+  font-weight: 400 700;
+  font-stretch: 75% 100%;
+  font-style: italic;
+  font-display: swap;
+}
+
 :root {
   --color-bg: #ffffff;
   --color-bg-elevated: #f6f6f6;
@@ -10,8 +94,8 @@
   --color-accent-strong: #a91717;
   --color-accent-contrast: #ffffff;
 
-  --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
-  --font-body: 'Inter', system-ui, sans-serif;
+  --font-display: 'Console Square', 'Inter', system-ui, sans-serif;
+  --font-body: 'Instrument Sans', system-ui, sans-serif;
 }
 
 :root[data-theme='dark'] {

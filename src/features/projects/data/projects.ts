@@ -4,7 +4,7 @@ export const projects: Project[] = [
   {
     id: 'project-five',
     title: 'NDA\'d Project',
-    company: 'Tanglewood Games',
+    company: 'Tanglewood Games Ltd.',
     category: 'professional',
     summary:
       'Collaborating with an external partner on an Unreal Engine 5 project.',

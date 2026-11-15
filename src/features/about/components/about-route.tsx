@@ -1,10 +1,8 @@
-import { MiniHeading } from '@/components/ui/miniheading';
 import { PageContainer } from '@/components/layout/page-container';
 
 export const AboutRoute = () => {
   return (
     <PageContainer className="py-16 sm:py-24">
-      <MiniHeading>About</MiniHeading>
       <h1 className="mt-3 font-display text-4xl font-semibold text-text sm:text-5xl">
         About Me
       </h1>
