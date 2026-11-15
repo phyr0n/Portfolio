@@ -94,7 +94,7 @@
   --color-accent-strong: #a91717;
   --color-accent-contrast: #ffffff;
 
-  --font-display: 'Console Square', 'Inter', system-ui, sans-serif;
+  --font-display: 'Console Square', system-ui, sans-serif;
   --font-body: 'Instrument Sans', system-ui, sans-serif;
 }
 

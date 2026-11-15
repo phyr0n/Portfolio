@@ -11,9 +11,9 @@ export const Panel = ({ label, action, className = '', bodyClassName = '', child
   return (
     <div className={`border border-border ${className}`}>
       {(label || action) && (
-        <div className="flex items-center justify-between border-b border-border px-5 py-3">
+        <div className="flex items-center justify-between border-b border-border px-3 py-3">
           {label && (
-            <span className="font-mono text-[11px] tracking-[0.2em] text-text-muted uppercase">
+            <span className="font-mono text-[11px] tracking-[0.2em] text-text-muted">
               {label}
             </span>
           )}
