@@ -44,25 +44,18 @@ export const ProjectDetailRoute = ({ projectId }: ProjectDetailRouteProps) => {
       </PageContainer>
 
       {hasMedia ? (
-        <PageContainer className="mt-6">
-          <ProjectMediaCarousel items={project.media!} title={project.title} />
-          {project.copyrightNotice && (
-            <p className="mt-2 text-xs text-text-muted">{project.copyrightNotice}</p>
-          )}
-        </PageContainer>
+        <ProjectMediaCarousel items={project.media!} title={project.title} className="mt-6 w-full" />
       ) : (
-        <>
-          <ProjectMarquee
-            marquee={project.marquee}
-            title={project.title}
-            className="mt-6 aspect-21/9 w-full"
-          />
-          {project.copyrightNotice && (
-            <PageContainer className="mt-2">
-              <p className="text-xs text-text-muted">{project.copyrightNotice}</p>
-            </PageContainer>
-          )}
-        </>
+        <ProjectMarquee
+          marquee={project.marquee}
+          title={project.title}
+          className="mt-6 aspect-21/9 w-full"
+        />
+      )}
+      {project.copyrightNotice && (
+        <PageContainer className="mt-2">
+          <p className="text-xs text-text-muted">{project.copyrightNotice}</p>
+        </PageContainer>
       )}
 
       <PageContainer>
