@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { paths } from '@/config/paths';
 import { Markdown } from '@/components/ui/markdown';
 import { PageContainer } from '@/components/layout/page-container';
@@ -7,11 +7,8 @@ import { ProjectMarquee } from './project-marquee';
 import { ProjectMediaCarousel } from './project-media-carousel';
 import { ProjectStatusBadge } from './project-status-badge';
 
-type ProjectDetailRouteProps = {
-  projectId: string;
-};
-
-export const ProjectDetailRoute = ({ projectId }: ProjectDetailRouteProps) => {
+export const ProjectDetailRoute = () => {
+  const projectId = useParams<{ projectId: string }>().projectId!;
   const project = getProjectById(projectId);
 
   if (!project) {
