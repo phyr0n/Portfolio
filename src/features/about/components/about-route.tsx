@@ -1,11 +1,10 @@
 import { PageContainer } from '@/components/layout/page-container';
+import { PageHeading } from '@/components/ui/page-heading';
 
 export const AboutRoute = () => {
   return (
     <PageContainer className="py-16 sm:py-24">
-      <h1 className="mt-3 font-display text-4xl font-semibold text-text sm:text-5xl">
-        About Me
-      </h1>
+      <PageHeading>About Me</PageHeading>
 
       <div className="mt-10 max-w-3xl space-y-5 text-text-muted">
         <p className="leading-relaxed">

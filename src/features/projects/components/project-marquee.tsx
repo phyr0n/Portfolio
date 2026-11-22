@@ -32,7 +32,7 @@ export const ProjectMarquee = ({ marquee, title, className = ''}: ProjectMarquee
         <MarqueePattern variant={marquee.variant} />
       </svg>
       {marquee.label && (
-        <span className="absolute right-3 bottom-3 font-mono text-[11px] tracking-[0.2em] text-text-muted uppercase">
+        <span className="absolute right-3 bottom-3 label-mono">
           {marquee.label}
         </span>
       )}

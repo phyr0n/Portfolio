@@ -1,4 +1,5 @@
 import { PageContainer } from '@/components/layout/page-container';
+import { PageHeading } from '@/components/ui/page-heading';
 import { projects } from '@/features/projects/data/projects';
 import type { Project, ProjectCategory } from '@/features/projects/types/project';
 import { ProjectsRow } from './projects-row';
@@ -20,9 +21,7 @@ export const ProjectsRoute = () => {
   return (
     <section className="py-16 sm:py-24">
       <PageContainer>
-        <h1 className="mt-3 font-display text-4xl font-semibold text-text sm:text-5xl">
-          Selected work
-        </h1>
+        <PageHeading>Selected work</PageHeading>
         <p className="mt-4 max-w-2xl text-text-muted">
           This page contains a selection of projects I have worked on in both a personal and a professional capacity. 
           Some details have been omitted in professional projects due to non-disclosure agreements (NDAs). 

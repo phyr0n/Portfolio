@@ -19,7 +19,7 @@ export const ProjectCard = ({ project, className = '' }: ProjectCardProps) => {
       <ProjectMarquee marquee={project.marquee} title={project.title} className="aspect-video" />
 
       <div className="flex flex-1 flex-col p-5">
-        <p className="font-mono text-[11px] tracking-[0.2em] text-text-muted uppercase">
+        <p className="label-mono">
           {project.company}
         </p>
 

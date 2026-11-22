@@ -1,4 +1,5 @@
 import { Panel } from '@/components/ui/panel';
+import { PageHeading } from '@/components/ui/page-heading';
 import { PageContainer } from '@/components/layout/page-container';
 
 const channels = [
@@ -10,9 +11,7 @@ const channels = [
 export const ContactRoute = () => {
   return (
     <PageContainer className="py-16 sm:py-24">
-      <h1 className="mt-3 font-display text-4xl font-semibold text-text sm:text-5xl">
-        Contact me
-      </h1>
+      <PageHeading>Contact me</PageHeading>
       <p className="mt-4 max-w-2xl text-text-muted">
         A more developed version of this page will be coming soon. In the meantime, feel free to connect with me below.
       </p>
@@ -22,7 +21,7 @@ export const ContactRoute = () => {
           <ul className="space-y-4">
             {channels.map((channel) => (
               <li key={channel.label} className="border-b border-border pb-4 last:border-b-0 last:pb-0">
-                <p className="text-xs tracking-[0.1em] text-text-muted uppercase">
+                <p className="label-caps">
                   {channel.label}
                 </p>
                 <p className="mt-1 text-sm text-text">{channel.value}</p>

@@ -35,7 +35,7 @@ export const ProjectDetailRoute = () => {
   return (
     <article>
       <PageContainer className="pt-8">
-        <Link to={paths.projects.getHref()} className="text-xs tracking-[0.15em] text-text-muted uppercase hover:text-accent">
+        <Link to={paths.projects.getHref()} className="label-caps hover:text-accent">
           ← Back to projects
         </Link>
       </PageContainer>
@@ -70,11 +70,11 @@ export const ProjectDetailRoute = () => {
             <ProjectStatusBadge status={project.status} />
             <dl className="flex gap-6 text-sm">
               <div>
-                <dt className="text-xs tracking-[0.1em] text-text-muted uppercase">Role</dt>
+                <dt className="label-caps">Role</dt>
                 <dd className="mt-1 text-text">{project.role}</dd>
               </div>
               <div>
-                <dt className="text-xs tracking-[0.1em] text-text-muted uppercase">Year</dt>
+                <dt className="label-caps">Year</dt>
                 <dd className="mt-1 text-text">{project.year}</dd>
               </div>
             </dl>
@@ -97,7 +97,7 @@ export const ProjectDetailRoute = () => {
             <aside className="space-y-6">
               {hasSkills && (
                 <div className="h-fit border border-border p-6">
-                  <p className="text-xs tracking-[0.15em] text-text-muted uppercase">Skills</p>
+                  <p className="label-caps">Skills</p>
                   <ul className="mt-4 flex flex-wrap gap-2">
                     {project.skills!.map((skill) => (
                       <li key={skill} className="border border-border px-2 py-1 text-xs text-text">
@@ -110,7 +110,7 @@ export const ProjectDetailRoute = () => {
 
               {hasLinks && (
                 <div className="h-fit border border-border p-6">
-                  <p className="text-xs tracking-[0.15em] text-text-muted uppercase">Links</p>
+                  <p className="label-caps">Links</p>
                   <ul className="mt-4 space-y-3">
                     {project.links!.map((link) => (
                       <li key={link.href + link.label}>
@@ -136,7 +136,7 @@ export const ProjectDetailRoute = () => {
             to={paths.projectDetail.getHref(previous.id)}
             className="group flex flex-col gap-1 py-8 pr-6 hover:text-accent"
           >
-            <span className="text-xs tracking-[0.15em] text-text-muted uppercase group-hover:text-accent">
+            <span className="label-caps group-hover:text-accent">
               ← Previous
             </span>
             <span className="font-display text-lg text-text group-hover:text-accent">{previous.title}</span>
@@ -145,7 +145,7 @@ export const ProjectDetailRoute = () => {
             to={paths.projectDetail.getHref(next.id)}
             className="group flex flex-col items-start gap-1 py-8 pl-0 sm:items-end sm:pl-6 sm:text-right hover:text-accent"
           >
-            <span className="text-xs tracking-[0.15em] text-text-muted uppercase group-hover:text-accent">
+            <span className="label-caps group-hover:text-accent">
               Next →
             </span>
             <span className="font-display text-lg text-text group-hover:text-accent">{next.title}</span>
