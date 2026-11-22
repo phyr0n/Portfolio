@@ -16,11 +16,11 @@ export const ProjectCard = ({ project, className = '' }: ProjectCardProps) => {
       to={paths.projectDetail.getHref(project.id)}
       className={`group flex w-[300px] shrink-0 snap-start flex-col border border-border transition-colors duration-150 hover:border-text sm:w-[340px] ${className}`}
     >
-      <ProjectMarquee marquee={project.marquee} title={project.title} className="aspect-4/3" />
+      <ProjectMarquee marquee={project.marquee} title={project.title} className="aspect-video" />
 
       <div className="flex flex-1 flex-col p-5">
         <p className="font-mono text-[11px] tracking-[0.2em] text-text-muted uppercase">
-          {project.company} · {project.category}
+          {project.company}
         </p>
 
         <h3 className="mt-2 font-display text-xl font-semibold text-text">
