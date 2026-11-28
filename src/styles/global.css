@@ -211,8 +211,7 @@ body {
   color: var(--color-text);
 }
 
-.markdown-body h5,
-.markdown-body h6 {
+.markdown-body h5, .markdown-body h6 {
   margin: 1.2em 0 0.4em;
   font-family: var(--font-mono);
   font-size: 0.75rem;
@@ -239,8 +238,7 @@ body {
   text-decoration-color: var(--color-accent);
 }
 
-.markdown-body ul,
-.markdown-body ol {
+.markdown-body ul, .markdown-body ol {
   margin: 1em 0;
   padding-left: 1.3em;
 }
@@ -302,8 +300,7 @@ body {
   font-size: 0.9em;
 }
 
-.markdown-body th,
-.markdown-body td {
+.markdown-body th, .markdown-body td {
   padding: 0.5em 0.75em;
   border: 1px solid var(--color-border);
   text-align: left;

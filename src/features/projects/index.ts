@@ -1,10 +1,10 @@
-export { ProjectsRoute } from './components/projects-route';
-export { ProjectDetailRoute } from './components/project-detail-route';
-export { ProjectCard } from './components/project-card';
-export { ProjectsRow } from './components/projects-row';
+export { default as ProjectsRoute } from './components/ProjectsRoute';
+export { default as ProjectDetailRoute } from './components/ProjectDetailRoute';
+export { default as ProjectCard } from './components/ProjectCard';
+export { default as ProjectsRow } from './components/ProjectsRow';
 export { ProjectMarquee } from './components/project-marquee';
-export { ProjectMediaCarousel } from './components/project-media-carousel';
-export { ProjectStatusBadge } from './components/project-status-badge';
+export { default as ProjectMediaCarousel } from './components/ProjectMediaCarousel';
+export { default as ProjectStatusBadge } from './components/ProjectStatusBadge';
 export { projects, getProjectById } from './data/projects';
 export type {
   Project,

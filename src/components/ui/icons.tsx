@@ -2,17 +2,8 @@ import type { ReactNode } from 'react';
 
 /** Shared 16px line-icon frame; children are the icon's shapes. */
 const Icon = ({ children }: { children: ReactNode }) => (
-  <svg
-    aria-hidden="true"
-    viewBox="0 0 24 24"
-    width="16"
-    height="16"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.75"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
+  <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round"
+    strokeLinejoin="round">
     {children}
   </svg>
 );

@@ -138,7 +138,7 @@ type ProjectMediaCarouselProps = {
   className?: string;
 };
 
-export const ProjectMediaCarousel = ({ items, title, className = '' }: ProjectMediaCarouselProps) => {
+export default function ProjectMediaCarousel({ items, title, className = '' }: ProjectMediaCarouselProps) {
   const [index, setIndex] = useState(0);
 
   const goTo = useCallback(
@@ -232,4 +232,4 @@ export const ProjectMediaCarousel = ({ items, title, className = '' }: ProjectMe
       )}
     </div>
   );
-};
+}

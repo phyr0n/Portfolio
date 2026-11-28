@@ -1,13 +1,13 @@
 import { Link, useParams } from 'react-router-dom';
 import { paths } from '@/config/paths';
-import { Markdown } from '@/components/ui/markdown';
-import { PageContainer } from '@/components/layout/page-container';
+import Markdown from '@/components/ui/Markdown';
+import PageContainer from '@/components/layout/PageContainer';
 import { getProjectById, projects } from '@/features/projects/data/projects';
 import { ProjectMarquee } from './project-marquee';
-import { ProjectMediaCarousel } from './project-media-carousel';
-import { ProjectStatusBadge } from './project-status-badge';
+import ProjectMediaCarousel from './ProjectMediaCarousel';
+import ProjectStatusBadge from './ProjectStatusBadge';
 
-export const ProjectDetailRoute = () => {
+export default function ProjectDetailRoute() {
   const projectId = useParams<{ projectId: string }>().projectId!;
   const project = getProjectById(projectId);
 
@@ -154,4 +154,4 @@ export const ProjectDetailRoute = () => {
       </PageContainer>
     </article>
   );
-};
+}

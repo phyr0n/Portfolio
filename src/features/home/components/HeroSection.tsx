@@ -1,8 +1,8 @@
 import { paths } from '@/config/paths';
 import { ButtonLink } from '@/components/ui/button';
-import { PageContainer } from '@/components/layout/page-container';
+import PageContainer from '@/components/layout/PageContainer';
 
-export const HeroSection = () => {
+export default function HeroSection() {
   return (
     <PageContainer className="pt-20 pb-16 sm:pt-28 sm:pb-24">
       <h1 className="font-display text-5xl leading-[1.05] font-semibold text-text sm:text-7xl">
@@ -18,9 +18,9 @@ export const HeroSection = () => {
           View projects
         </ButtonLink>
         <ButtonLink to={paths.contact.getHref()} variant="secondary">
-          Get in touch
+          Contact me
         </ButtonLink>
       </div>
     </PageContainer>
   );
-};
+}

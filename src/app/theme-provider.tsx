@@ -1,11 +1,4 @@
-import {
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useState,
-  type PropsWithChildren,
-} from 'react';
+import { createContext, useCallback, useContext, useEffect, useState, type PropsWithChildren } from 'react';
 
 export type Theme = 'light' | 'dark';
 
@@ -18,24 +11,9 @@ const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
 
 const STORAGE_KEY = 'theme';
 
-const getInitialTheme = (): Theme => {
-  if (typeof document !== 'undefined') {
-    const fromDom = document.documentElement.getAttribute('data-theme');
-    if (fromDom === 'light' || fromDom === 'dark') return fromDom;
-  }
-  if (typeof window !== 'undefined') {
-    try {
-      const stored = window.localStorage.getItem(STORAGE_KEY);
-      if (stored === 'light' || stored === 'dark') return stored;
-    } catch {
-      // localStorage unavailable — fall through to system preference
-    }
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'dark';
-    }
-  }
-  return 'light';
-};
+function getInitialTheme(): Theme {
+  return document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+}
 
 export const ThemeProvider = ({ children }: PropsWithChildren) => {
   const [theme, setTheme] = useState<Theme>(getInitialTheme);

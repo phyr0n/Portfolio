@@ -1,8 +1,8 @@
-import { PageContainer } from '@/components/layout/page-container';
-import { PageHeading } from '@/components/ui/page-heading';
+import PageContainer from '@/components/layout/PageContainer';
+import PageHeading from '@/components/ui/PageHeading';
 import { projects } from '@/features/projects/data/projects';
 import type { Project, ProjectCategory } from '@/features/projects/types/project';
-import { ProjectsRow } from './projects-row';
+import ProjectsRow from './ProjectsRow';
 
 const groups: { category: ProjectCategory; heading: string; description: string }[] = [
   {
@@ -17,7 +17,7 @@ const groups: { category: ProjectCategory; heading: string; description: string 
   },
 ];
 
-export const ProjectsRoute = () => {
+export default function ProjectsRoute() {
   return (
     <section className="py-16 sm:py-24">
       <PageContainer>
@@ -49,4 +49,4 @@ export const ProjectsRoute = () => {
       })}
     </section>
   );
-};
+}

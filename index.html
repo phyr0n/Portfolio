@@ -32,6 +32,7 @@
           document.documentElement.setAttribute('data-theme', theme);
 
         } catch (e) {
+          // We'll default to light mode if an error occurs.
           document.documentElement.setAttribute('data-theme', 'light');
         }
       })();

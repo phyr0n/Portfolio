@@ -7,7 +7,7 @@ type MarkdownProps = {
   className?: string;
 };
 
-export const Markdown = ({ children, className = '' }: MarkdownProps) => {
+export default function Markdown({ children, className = '' }: MarkdownProps) {
   return (
     <div className={`markdown-body ${className}`}>
       <ReactMarkdown remarkPlugins={[remarkGfm]} components={{
@@ -27,4 +27,4 @@ export const Markdown = ({ children, className = '' }: MarkdownProps) => {
       </ReactMarkdown>
     </div>
   );
-};
+}

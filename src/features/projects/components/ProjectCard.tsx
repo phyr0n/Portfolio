@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 import { paths } from '@/config/paths';
 import type { Project } from '@/features/projects/types/project';
 import { ProjectMarquee } from './project-marquee';
-import { ProjectStatusBadge } from './project-status-badge';
+import ProjectStatusBadge from './ProjectStatusBadge';
 
 type ProjectCardProps = {
   project: Project;
   className?: string;
 };
 
-export const ProjectCard = ({ project, className = '' }: ProjectCardProps) => {
+export default function ProjectCard({ project, className = '' }: ProjectCardProps) {
   return (
     <Link
       to={paths.projectDetail.getHref(project.id)}
@@ -40,4 +40,4 @@ export const ProjectCard = ({ project, className = '' }: ProjectCardProps) => {
       </div>
     </Link>
   );
-};
+}

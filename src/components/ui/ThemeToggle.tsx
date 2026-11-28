@@ -1,8 +1,8 @@
 import { useTheme } from '@/app/theme-provider';
-import { IconButton } from './icon-button';
+import IconButton from './IconButton';
 import { MoonIcon, SunIcon } from './icons';
 
-export const ThemeToggle = () => {
+export default function ThemeToggle() {
   const { theme, toggleTheme } = useTheme();
   const isDark = theme === 'dark';
 
@@ -11,4 +11,4 @@ export const ThemeToggle = () => {
       {isDark ? <SunIcon /> : <MoonIcon />}
     </IconButton>
   );
-};
+}

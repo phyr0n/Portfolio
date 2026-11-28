@@ -10,7 +10,7 @@ const statusCopy: Record<Exclude<ProjectStatus, 'released'>, string> = {
   cancelled: 'Cancelled',
 };
 
-export const ProjectStatusBadge = ({ status, className = '' }: ProjectStatusBadgeProps) => {
+export default function ProjectStatusBadge({ status, className = '' }: ProjectStatusBadgeProps) {
   if (status === 'released') return null;
 
   const isCancelled = status === 'cancelled';
@@ -30,4 +30,4 @@ export const ProjectStatusBadge = ({ status, className = '' }: ProjectStatusBadg
       {statusCopy[status]}
     </span>
   );
-};
+}

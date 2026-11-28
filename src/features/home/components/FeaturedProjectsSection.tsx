@@ -1,9 +1,9 @@
 import { ButtonLink } from '@/components/ui/button';
-import { PageContainer } from '@/components/layout/page-container';
+import PageContainer from '@/components/layout/PageContainer';
 import { paths } from '@/config/paths';
 import { ProjectsRow, projects } from '@/features/projects';
 
-export const FeaturedProjectsSection = () => {
+export default function FeaturedProjectsSection() {
   const featured = projects.slice(0, 4);
 
   return (
@@ -24,4 +24,4 @@ export const FeaturedProjectsSection = () => {
       </div>
     </section>
   );
-};
+}

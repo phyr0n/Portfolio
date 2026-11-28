@@ -7,7 +7,7 @@ type PanelProps = PropsWithChildren<{
   action?: ReactNode;
 }>;
 
-export const Panel = ({ label, action, className = '', bodyClassName = '', children }: PanelProps) => {
+export default function Panel({ label, action, className = '', bodyClassName = '', children }: PanelProps) {
   return (
     <div className={`border border-border ${className}`}>
       {(label || action) && (
@@ -23,4 +23,4 @@ export const Panel = ({ label, action, className = '', bodyClassName = '', child
       <div className={`p-6 sm:p-8 ${bodyClassName}`}>{children}</div>
     </div>
   );
-};
+}

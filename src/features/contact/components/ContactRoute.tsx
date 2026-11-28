@@ -1,6 +1,6 @@
-import { Panel } from '@/components/ui/panel';
-import { PageHeading } from '@/components/ui/page-heading';
-import { PageContainer } from '@/components/layout/page-container';
+import Panel from '@/components/ui/Panel';
+import PageHeading from '@/components/ui/PageHeading';
+import PageContainer from '@/components/layout/PageContainer';
 
 const channels = [
   { label: 'Email', value: 'me@adamtait.net' },
@@ -8,7 +8,7 @@ const channels = [
   { label: 'GitHub', value: 'github.com/phyr0n' },
 ];
 
-export const ContactRoute = () => {
+export default function ContactRoute() {
   return (
     <PageContainer className="py-16 sm:py-24">
       <PageHeading>Contact me</PageHeading>
@@ -32,4 +32,4 @@ export const ContactRoute = () => {
       </div>
     </PageContainer>
   );
-};
+}

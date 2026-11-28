@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { paths } from '@/config/paths';
 
-export const UnknownPageRoute = () => {
+export default function UnknownPageRoute() {
   return (
     <div className="mx-auto flex min-h-[70vh] max-w-3xl flex-col items-start justify-center gap-6 px-6 py-24">
       <h1 className="font-display text-5xl font-semibold text-text sm:text-6xl">
@@ -15,4 +15,4 @@ export const UnknownPageRoute = () => {
       </Link>
     </div>
   );
-};
+}

@@ -1,14 +1,13 @@
 import { useRef } from 'react';
-
-import { PageContainer, BleedLeft } from '@/components/layout/page-container';
+import PageContainer from '@/components/layout/PageContainer';
 import type { Project } from '@/features/projects/types/project';
-import { ProjectCard } from './project-card';
+import ProjectCard from './ProjectCard';
 
 type ProjectsRowProps = {
   projects: Project[];
 };
 
-export const ProjectsRow = ({ projects }: ProjectsRowProps) => {
+export default function ProjectsRow({ projects }: ProjectsRowProps) {
   const scrollerRef = useRef<HTMLDivElement>(null);
 
   if (projects.length === 0) {
@@ -27,16 +26,14 @@ export const ProjectsRow = ({ projects }: ProjectsRowProps) => {
 
   return (
     <div>
-      <BleedLeft>
-        <div
-          ref={scrollerRef}
-          className="flex snap-x snap-mandatory gap-6 overflow-x-auto pr-6 pb-4 [scrollbar-width:thin]"
-        >
+      {/* Left edge lines up with PageContainer's content; the row runs on to the screen's right edge. */}
+      <div className="pl-6 sm:pl-[max(1.5rem,calc((100vw-100rem)/2+1.5rem))]">
+        <div ref={scrollerRef} className="flex snap-x snap-mandatory gap-6 overflow-x-auto pr-6 pb-4 [scrollbar-width:thin]">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
-      </BleedLeft>
+      </div>
 
       <PageContainer className="mt-4 flex justify-end gap-2">
         <button
@@ -62,4 +59,4 @@ export const ProjectsRow = ({ projects }: ProjectsRowProps) => {
       </PageContainer>
     </div>
   );
-};
+}

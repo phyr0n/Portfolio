@@ -1,7 +1,7 @@
-import { PageContainer } from '@/components/layout/page-container';
-import { PageHeading } from '@/components/ui/page-heading';
+import PageContainer from '@/components/layout/PageContainer';
+import PageHeading from '@/components/ui/PageHeading';
 
-export const AboutRoute = () => {
+export default function AboutRoute() {
   return (
     <PageContainer className="py-16 sm:py-24">
       <PageHeading>About Me</PageHeading>
@@ -33,4 +33,4 @@ export const AboutRoute = () => {
       </div>
     </PageContainer>
   );
-};
+}

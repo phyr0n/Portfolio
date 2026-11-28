@@ -4,7 +4,7 @@ import { ThemeProvider } from './theme-provider';
 /**
  * Put application-wide providers in this provider (i.e. error boundaries, theme providers, etc.).
  */
-export const AppProvider = ({ children }: PropsWithChildren) => {
+export default function AppProvider({ children }: PropsWithChildren) {
   return (
   <>
     <ThemeProvider>
@@ -12,4 +12,4 @@ export const AppProvider = ({ children }: PropsWithChildren) => {
     </ThemeProvider>
   </>
   )
-};
+}
