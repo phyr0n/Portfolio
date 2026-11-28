@@ -16,13 +16,21 @@
       (function () {
         try {
           var stored = localStorage.getItem('theme');
-          var theme =
-            stored === 'light' || stored === 'dark'
-              ? stored
-              : window.matchMedia('(prefers-color-scheme: dark)').matches
-                ? 'dark'
-                : 'light';
+
+          var theme;
+          if (stored === 'light' || stored === 'dark') {
+            theme = stored;
+          }
+          // If we can't find a saved theme, we default to the user's system preference.
+          else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            theme = 'dark';
+          }
+          else {
+            theme = 'light';
+          }
+
           document.documentElement.setAttribute('data-theme', theme);
+
         } catch (e) {
           document.documentElement.setAttribute('data-theme', 'light');
         }
